@@ -1,5 +1,8 @@
 # GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering
-<img src="./img/logo.gif" style="zoom:33%;" align="center" />
+
+<p align="center" width="100%">
+    <img width="33%" src="./img/logo.gif">
+</p>
 
 --------
 <p align="center">
