@@ -10,17 +10,15 @@
      <a href="http://arxiv.org/abs/2403.11324"><img src="https://img.shields.io/badge/GeoGaussian-Paper-yellow.svg"></a>
     <a href="https://"><img src="https://img.shields.io/badge/GeoGaussian-video-blue.svg"></a>
 </p>
-|              3DGS               |             LightGS              |           GeoGaussian           |
-| :-----------------------------: | :------------------------------: | :-----------------------------: |
-| <img src="img/gif/o2-3DGS.gif"> | <img src="img/gif/o2-light.gif"> | <img src="img/gif/o2-ours.gif"> |
-
-The code will be released soon.
 
 
 
 
-
-
+<p align="center" width="100%">
+    <img width="30%" src="img/gif/o2-3DGS.gif">
+    <img width="30%" src="img/gif/o2-light.gif">
+    <img width="30%" src="img/gif/o2-ours.gif">
+</p>
 
 
 
