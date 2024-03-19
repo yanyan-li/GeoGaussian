@@ -10,7 +10,8 @@
      <a href="http://arxiv.org/abs/2403.11324"><img src="https://img.shields.io/badge/GeoGaussian-Paper-yellow.svg"></a>
     <a href="https://"><img src="https://img.shields.io/badge/GeoGaussian-video-blue.svg"></a>
 </p>
-<video src="img/teaser_challenging.mp4"></video>
+
+<video src="img/teaser_challenging.mp4" width="100%" controls></video>
 
 
 
