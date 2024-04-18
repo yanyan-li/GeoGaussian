@@ -13,6 +13,10 @@
 
 <video src="img/teaser_challenging.mp4" width="100%" controls></video>
 
+### Baseline
+**1. Gaussian-Splatting with Planar Point Clouds**
+[Repo](https://github.com/yanyan-li/gaussian-splatting-using-PlanarSLAM?tab=readme-ov-file)
+
 
 
 The code will be released soon!
