@@ -11,7 +11,9 @@
     <a href="https://"><img src="https://img.shields.io/badge/GeoGaussian-video-blue.svg"></a>
 </p>
 
-<video src="./img/teaser_challenging.mp4" width="100%" controls></video>
+<p align="center" width="100%">
+    <video width="100%"  src="./img/teaser_challenging.mp4" controls>
+</p>
 
 ### BibTex
 ```
