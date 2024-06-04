@@ -15,6 +15,10 @@
     <video src="https://github.com/yanyan-li/GeoGaussian/blob/main/img/teaser_challenging.mp4"></video>
 </p>
 
+| 3DGS    | LightGS | GeoGaussian |
+| :------: | :------: | :------:
+| <img width="100%" src="./img/gif/o2-3DGS.gif">  |  <img width="100%" src="./img/gif/o2-light.gif">   |<img width="100%" src="./img/gif/o2-ours.gif">|
+
 ### BibTex
 ```
 @article{li2024geogaussian,
@@ -28,6 +32,7 @@
 
 ### 1.Dataset
 Based on the SLAM method, **PlanarSLAM**, we create new point clouds rather then using results of COLMAP for experiments. 
+
 
 ### 2.Baseline
 **1. Gaussian-Splatting with Planar Point Clouds**
