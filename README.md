@@ -12,7 +12,7 @@
 </p>
 
 <p align="center" width="100%">
-    <video width="100%"  src="https://github.com/yanyan-li/GeoGaussian/blob/main/img/teaser_challenging.mp4">
+    <video src="https://github.com/yanyan-li/GeoGaussian/blob/main/img/teaser_challenging.mp4"></video>
 </p>
 
 ### BibTex
