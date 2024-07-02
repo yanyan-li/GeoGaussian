@@ -1,4 +1,4 @@
-# GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering
+# GeoGaussian: Geometry-aware Gaussian Splatting for Scene Rendering (ECCV 2024)
 
 <p align="center" width="100%">
     <img width="33%" src="./img/logo.gif">
