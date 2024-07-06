@@ -33,6 +33,18 @@
 ### 1.Dataset
 Based on the SLAM method, **PlanarSLAM**, we create new point clouds rather then using results of COLMAP for experiments. 
 
+<p align="center" width="100%">
+    <img width="90%" src="./img/dataset_img.png">
+</p>
+
+**New Features of this type of input**
+<ol>
+<li> Points lying on the non-textured regions </li>
+<li> Global plane instances that are represented in different colors </li>
+<li> Surface normal vector of each planar point </li>
+</ol>
+
+**The subdataset can be obtained via [Replica](), [TUM RGB-D](), [ICL NUIM]().**
 
 ### 2.Baseline
 **1. Gaussian-Splatting with Planar Point Clouds**
