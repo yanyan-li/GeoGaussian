@@ -44,7 +44,7 @@ Based on the SLAM method, **PlanarSLAM**, we create new point clouds rather then
 <li> Surface normal vector of each planar point </li>
 </ol>
 
-**The subdataset can be obtained via [Replica](https://drive.google.com/drive/folders/1LO0a-M__cZJu3TnaMX-fEP4YxFs5LDGZ?usp=drive_link), [TUM RGB-D](https://drive.google.com/drive/folders/1hDPRH3FGg_HpQYwZWg_wgZbonClVbcbC?usp=drive_link), [ICL NUIM](https://drive.google.com/drive/folders/1UV7DqybCUcYl3Yn4kV030lQOKhwGUHU6?usp=drive_link).**
+**The subdataset can be obtained via [Replica (PlanarSLAM)](https://drive.google.com/drive/folders/1LO0a-M__cZJu3TnaMX-fEP4YxFs5LDGZ?usp=drive_link), [TUM RGB-D (PlanarSLAM)](https://drive.google.com/drive/folders/1hDPRH3FGg_HpQYwZWg_wgZbonClVbcbC?usp=drive_link), [ICL NUIM (PlanarSLAM)](https://drive.google.com/drive/folders/1UV7DqybCUcYl3Yn4kV030lQOKhwGUHU6?usp=drive_link). Then you need to place the raw dataset images in the ``results`` folder. The raw images can be obtained via [Replica](https://cvg-data.inf.ethz.ch/nice-slam/data/Replica.zip), [TUM RGB-D](https://cvg.cit.tum.de/data/datasets/rgbd-dataset/download), [ICL NUIM](https://www.doc.ic.ac.uk/~ahanda/VaFRIC/iclnuim.html).**
 
 ### 2.Baseline
 **1. Gaussian-Splatting with Planar Point Clouds**
