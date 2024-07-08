@@ -44,7 +44,7 @@ Based on the SLAM method, **PlanarSLAM**, we create new point clouds rather then
 <li> Surface normal vector of each planar point </li>
 </ol>
 
-**The subdataset can be obtained via [Replica](), [TUM RGB-D](), [ICL NUIM]().**
+**The subdataset can be obtained via [Replica](https://drive.google.com/drive/folders/1LO0a-M__cZJu3TnaMX-fEP4YxFs5LDGZ?usp=drive_link), [TUM RGB-D](https://drive.google.com/drive/folders/1hDPRH3FGg_HpQYwZWg_wgZbonClVbcbC?usp=drive_link), [ICL NUIM](https://drive.google.com/drive/folders/1UV7DqybCUcYl3Yn4kV030lQOKhwGUHU6?usp=drive_link).**
 
 ### 2.Baseline
 **1. Gaussian-Splatting with Planar Point Clouds**
