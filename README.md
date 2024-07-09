@@ -46,6 +46,16 @@ Based on the SLAM method, **PlanarSLAM**, we create new point clouds rather then
 
 **The subdataset can be obtained via [Replica (PlanarSLAM)](https://drive.google.com/drive/folders/1LO0a-M__cZJu3TnaMX-fEP4YxFs5LDGZ?usp=drive_link), [TUM RGB-D (PlanarSLAM)](https://drive.google.com/drive/folders/1hDPRH3FGg_HpQYwZWg_wgZbonClVbcbC?usp=drive_link), [ICL NUIM (PlanarSLAM)](https://drive.google.com/drive/folders/1UV7DqybCUcYl3Yn4kV030lQOKhwGUHU6?usp=drive_link). Then you need to place the raw dataset images in the ``results`` folder. The raw images can be obtained via [Replica](https://cvg-data.inf.ethz.ch/nice-slam/data/Replica.zip), [TUM RGB-D](https://cvg.cit.tum.de/data/datasets/rgbd-dataset/download), [ICL NUIM](https://www.doc.ic.ac.uk/~ahanda/VaFRIC/iclnuim.html).**
 
+**For each sequence, the structure is organized as follows**
+```
+Replica_r2
+	|______PointClouds.ply   # sparse point clouds from the SLAM system
+ 	|______KeyFrameTrajectory2.txt  # camera poses from the SLAM system
+  	|______results     # folder for all raw images
+```
+*our code provides the interface to deal with the type of data format.*
+
+
 ### 2.Baseline
 **1. Gaussian-Splatting with Planar Point Clouds**
 [Repo](https://github.com/yanyan-li/gaussian-splatting-using-PlanarSLAM?tab=readme-ov-file)
