@@ -1,0 +1,12 @@
+*.pyc
+.vscode
+.idea
+data
+output
+build
+submodules/diff-gaussian-rasterization/build/
+submodules/diff-gaussian-rasterization/diff_gaussian_rasterization.egg-info/
+submodules/diff-gaussian-rasterization/dist/
+submodules/simple-knn/build/
+submodules/simple-knn/simple_knn.egg-info/
+submodules/simple-knn/dist/
