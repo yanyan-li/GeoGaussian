@@ -19,7 +19,7 @@ preserved, especially in non-textured regions such as walls, ceilings,
 and furniture surfaces. This degradation significantly affects 
 the rendering quality of novel views that deviate significantly 
 from the viewpoints in the training data. 
-To mitigate this issue, we propose a novel approach called **GeoGaussian**. 
+To mitigate this issue, we propose a novel approach called ***GeoGaussian***. 
 Based on the smoothly connected areas observed from point clouds, 
 this method introduces a novel pipeline to initialize thin Gaussians 
 aligned with the surfaces, where the characteristic can be transferred 
@@ -39,31 +39,26 @@ as evaluated qualitatively and quantitatively on public datasets.
 <img width="100%" alt="image" src="img/gif/compressed-icl-r2-out.gif">
 </div>
 
-<div style="display: flex; justify-content: space-between; align-items: center;">  
-    <span> </span>  
-    <span>3DGS</span>  
-    <span> </span>
-    <span>LightGS</span>  
-    <span> </span>
-    <span>GeoGaussian</span>
-    <span> </span>
+<div align="center">
+<b>  3DGS | LightGS | GeoGaussian(Ours) </b> 
 </div>
+ 
 
 *Comparisons of novel view rendering on public datasets. At some challenging
 viewpoints having bigger differences in translation and orientation motions compared
 with training views, 3DGS and LightGS have issues with photorealistic rendering.*
 
 ## 📋 TODO Lists
-- [✔] *Repo* - Create repo for [GeoGaussian](https://github.com/yanyan-li/GeoGaussian).
-- [✔] *Code* - Release for our methods
-- [✔] *Code* - Randomly sample N points for each Gaussian point [script](sample_gaussian_model.py)
-- [✔] *Dataset* - Upload [dataset](#-dataset) download link.
-- [✔] *ReadMe* - Teaser( [I](img/gif/compressed-o2-out.gif) [II](img/gif/compressed-o2-out.gif) [III](img/gif/compressed-icl-r2-out.gif) ) images & [Abstract](#-abstract).
-- [✔] *ReadMe* - Geometry-aware [Strategies](#-geometry-aware-strategies).
+- [x] *Repo* - Create repo for [GeoGaussian](https://github.com/yanyan-li/GeoGaussian).
+- [x] *Code* - Release for our methods.
+- [x] *Code* - Randomly sample N points for each Gaussian point [script](sample_gaussian_model.py).
+- [x] *Dataset* - Upload [dataset](#-dataset) download link.
+- [x] *ReadMe* - Teaser( [I](img/gif/compressed-o2-out.gif) [II](img/gif/compressed-o2-out.gif) [III](img/gif/compressed-icl-r2-out.gif) ) images & [Abstract](#-abstract).
+- [x] *ReadMe* - Geometry-aware [Strategies](#-geometry-aware-strategies).
 - [ ] *ReadMe* - Repository [Setup](#-setup-of-geogaussian).
-- [✔] *ReadMe* - [Results](#-results) for Table I. & Table II.
-- [✔] *ReadMe* - [License](#-license) & [Acknowledgment](#-acknowledgment) & [Citation](#-citation).
-- [✔] *License* - Released under the [Gaussian-Splatting License](LICENSE.md).
+- [x] *ReadMe* - [Results](#-results) for Table I. & Table II.
+- [x] *ReadMe* - [License](#-license) & [Acknowledgment](#-acknowledgment) & [Citation](#-citation).
+- [x] *License* - Released under the [Gaussian-Splatting License](LICENSE.md).
 
 ## 🚀 Geometry-aware Strategies
 <div align="center">
@@ -82,7 +77,7 @@ Based on the SLAM method, **PlanarSLAM**, we create new point clouds rather then
     <img width="90%" src="./img/dataset_img.png">
 </p>
 
-**New Features of this type of input**
+**New Features of this type of input:**
 <ol>
 <li> Points lying on the non-textured regions </li>
 <li> Global plane instances that are represented in different colors </li>
@@ -121,30 +116,6 @@ Replica_r2
 
 
 ## 📊 Results
-<style>
-    @media (prefers-color-scheme: light) {
-        best_data {
-            color: #0d1117;
-            background: #57cc99;
-        }
-        second_data {
-            color: #0d1117;
-            background: #c7f9cc;
-        }
-    }
-    @media (prefers-color-scheme: dark) {
-        best_data {
-            color: #57cc99;
-            background: #0d1117;
-        }
-        second_data {
-            color: #c7f9cc;
-            background: #0d1117;
-        }
-    }
- </style>
-
-
 
 <table>
     <tr>
@@ -160,86 +131,86 @@ Replica_r2
         <td>33.98</td>
         <td>37.45</td>
         <td>37.60</td>
-        <td><second_data>30.54</second_data></td>
-        <td><second_data>34.06</second_data></td>
-        <td><second_data>37.72</second_data></td>
-        <td><best_data>38.44</best_data></td>
-        <td><best_data>31.65</best_data></td>
-        <td><best_data>35.17</best_data></td>
-        <td><best_data>38.00</best_data></td>
-        <td><second_data>38.24</second_data></td>
+        <td><i>30.54</i></td>
+        <td><i>34.06</i></td>
+        <td><i>37.72</i></td>
+        <td><i><b>38.44</b></i></td>
+        <td><i><b>31.65</b></i></td>
+        <td><i><b>35.17</b></i></td>
+        <td><i><b>38.00</b></i></td>
+        <td><i>38.24</i></td>
     </tr>
     <tr>
-        <td><second_data>0.932</second_data></td>
-        <td><second_data>0.951</second_data></td>
+        <td><i>0.932</i></td>
+        <td><i>0.951</i></td>
         <td>0.964</td>
         <td>0.965</td>
-        <td><second_data>0.932</second_data></td>
-        <td><second_data>0.951</second_data></td>
-        <td><second_data>0.965</second_data></td>
-        <td><second_data>0.967</second_data></td>
-        <td><best_data>0.937</best_data></td>
-        <td><best_data>0.957</best_data></td>
-        <td><best_data>0.968</best_data></td>
-        <td><best_data>0.979</best_data></td>
+        <td><i>0.932</i></td>
+        <td><i>0.951</i></td>
+        <td><i>0.965</i></td>
+        <td><i>0.967</i></td>
+        <td><i><b>0.937</b></i></td>
+        <td><i><b>0.957</b></i></td>
+        <td><i><b>0.968</b></i></td>
+        <td><i><b>0.979</b></i></td>
     </tr>
     <tr>
-        <td><second_data>0.051</second_data></td>
+        <td><i>0.051</i></td>
         <td>0.036</td>
         <td>0.029</td>
         <td>0.028</td>
-        <td><second_data>0.051</second_data></td>
-        <td><second_data>0.035</second_data></td>
-        <td><second_data>0.028</second_data></td>
-        <td><second_data>0.025</second_data></td>
-        <td><best_data>0.041</best_data></td>
-        <td><best_data>0.027</best_data></td>
-        <td><best_data>0.022</best_data></td>
-        <td><best_data>0.021</best_data></td>
+        <td><i>0.051</i></td>
+        <td><i>0.035</i></td>
+        <td><i>0.028</i></td>
+        <td><i>0.025</i></td>
+        <td><i><b>0.041</b></i></td>
+        <td><i><b>0.027</b></i></td>
+        <td><i><b>0.022</b></i></td>
+        <td><i><b>0.021</b></i></td>
     </tr>
     <tr>
         <td rowspan="3"><div align="left">R2</div></td>    
         <td rowspan="3"><div align="center">PSNR↑<br>SSIM↑<br>LPIPS↓</div></td>
         <td>31.53</td>
         <td>35.82</td>
-        <td>>38.53</td>
+        <td>38.53</td>
         <td>38.70</td>
-        <td><second_data>31.54</second_data></td>
-        <td><second_data>35.93</second_data></td>
-        <td><second_data>38.78</second_data></td>
-        <td><second_data>39.07</second_data></td>
-        <td><best_data>32.13</best_data></td>
-        <td><best_data>36.81</best_data></td>
-        <td><best_data>38.84</best_data></td>
-        <td><best_data>39.14</best_data></td>
+        <td><i>31.54</i></td>
+        <td><i>35.93</i></td>
+        <td><i>38.78</i></td>
+        <td><i>39.07</i></td>
+        <td><i><b>32.13</b></i></td>
+        <td><i><b>36.81</b></i></td>
+        <td><i><b>38.84</b></i></td>
+        <td><i><b>39.14</b></i></td>
     </tr>
     <tr>
-        <td><second_data>0.935</second_data></td> 
-        <td><second_data>0.959</second_data></td> 
-        <td><second_data>0.968</second_data></td> 
-        <td><second_data>0.968</second_data></td> 
-        <td><second_data>0.935</second_data></td> 
-        <td><second_data>0.959</second_data></td> 
-        <td><second_data>0.968</second_data></td> 
-        <td><second_data>0.968</second_data></td> 
-        <td><best_data>0.943</best_data></td> 
-        <td><best_data>0.963</best_data></td> 
-        <td><best_data>0.969</best_data></td> 
-        <td><best_data>0.970</best_data></td> 
+        <td><i>0.935</i></td> 
+        <td><i>0.959</i></td> 
+        <td><i>0.968</i></td> 
+        <td><i>0.968</i></td> 
+        <td><i>0.935</i></td> 
+        <td><i>0.959</i></td> 
+        <td><i>0.968</i></td> 
+        <td><i>0.968</i></td> 
+        <td><i><b>0.943</b></i></td> 
+        <td><i><b>0.963</b></i></td> 
+        <td><i><b>0.969</b></i></td> 
+        <td><i><b>0.970</b></i></td> 
     </tr>
     <tr>
         <td>0.050</td> 
-        <td><second_data>0.031</second_data></td> 
+        <td><i>0.031</i></td> 
         <td>0.028</td> 
         <td>0.029</td> 
-        <td><second_data>0.049</second_data></td> 
-        <td><second_data>0.031</second_data></td> 
-        <td><second_data>0.027</second_data></td> 
-        <td><second_data>0.028</second_data></td> 
-        <td><best_data>0.041</best_data></td> 
-        <td><best_data>0.025</best_data></td> 
-        <td><best_data>0.024</best_data></td> 
-        <td><best_data>0.024</best_data></td>
+        <td><i>0.049</i></td> 
+        <td><i>0.031</i></td> 
+        <td><i>0.027</i></td> 
+        <td><i>0.028</i></td> 
+        <td><i><b>0.041</b></i></td> 
+        <td><i><b>0.025</b></i></td> 
+        <td><i><b>0.024</b></i></td> 
+        <td><i><b>0.024</b></i></td>
     </tr>
     <tr>
         <td rowspan="3"><div align="left">OFF3</div></td>    
@@ -248,86 +219,86 @@ Replica_r2
         <td>33.86</td> 
         <td>36.26</td> 
         <td>36.56</td> 
-        <td><second_data>30.93</second_data></td> 
-        <td><second_data>33.90</second_data></td> 
-        <td><second_data>36.38</second_data></td> 
-        <td><second_data>36.63</second_data></td> 
-        <td><best_data>31.62</best_data></td> 
-        <td><best_data>33.91</best_data></td> 
-        <td><best_data>36.42</best_data></td> 
-        <td><best_data>36.66</best_data></td>
+        <td><i>30.93</i></td> 
+        <td><i>33.90</i></td> 
+        <td><i>36.38</i></td> 
+        <td><i>36.63</i></td> 
+        <td><i><b>31.62</b></i></td> 
+        <td><i><b>33.91</b></i></td> 
+        <td><i><b>36.42</b></i></td> 
+        <td><i><b>36.66</b></i></td>
     </tr>
     <tr>
-        <td><second_data>0.928</second_data></td> 
+        <td><i>0.928</i></td> 
         <td>0.946</td> 
-        <td><second_data>0.958</second_data></td> 
-        <td><second_data>0.959</second_data></td> 
-        <td><second_data>0.928</second_data></td> 
-        <td><second_data>0.947</second_data></td> 
-        <td><second_data>0.958</second_data></td> 
+        <td><i>0.958</i></td> 
+        <td><i>0.959</i></td> 
+        <td><i>0.928</i></td> 
+        <td><i>0.947</i></td> 
+        <td><i>0.958</i></td> 
         <td>0.958</td> 
-        <td><best_data>0.938</best_data></td> 
-        <td><best_data>0.953</best_data></td> 
-        <td><best_data>0.963</best_data></td> 
-        <td><best_data>0.964</best_data></td>
+        <td><i><b>0.938</b></i></td> 
+        <td><i><b>0.953</b></i></td> 
+        <td><i><b>0.963</b></i></td> 
+        <td><i><b>0.964</b></i></td>
     </tr>
     <tr>
-        <td><second_data>0.052</second_data></td> 
-        <td><second_data>0.040</second_data></td> 
+        <td><i>0.052</i></td> 
+        <td><i>0.040</i></td> 
         <td>0.037</td> 
         <td>0.036</td> 
-        <td><second_data>0.052</second_data></td> 
-        <td><second_data>0.040</second_data></td> 
-        <td><second_data>0.036</second_data></td> 
-        <td><second_data>0.037</second_data></td> 
-        <td><best_data>0.040</best_data></td> 
-        <td><best_data>0.032</best_data></td> 
-        <td><best_data>0.029</best_data></td> 
-        <td><best_data>0.029</best_data></td>
+        <td><i>0.052</i></td> 
+        <td><i>0.040</i></td> 
+        <td><i>0.036</i></td> 
+        <td><i>0.037</i></td> 
+        <td><i><b>0.040</b></i></td> 
+        <td><i><b>0.032</b></i></td> 
+        <td><i><b>0.029</b></i></td> 
+        <td><i><b>0.029</b></i></td>
     </tr>
     <tr>
         <td rowspan="3"><div align="left">OFF4</div></td>    
         <td rowspan="3"><div align="center">PSNR↑<br>SSIM↑<br>LPIPS↓</div></td>
-        <td><second_data>29.5</second_data></td> 
+        <td><i>29.5</i></td> 
         <td>32.98</td> 
         <td>37.70</td> 
         <td>38.48</td> 
         <td>29.51</td> 
-        <td><second_data>32.97</second_data></td> 
-        <td><second_data>37.95</second_data></td> 
-        <td><second_data>38.59</second_data></td> 
-        <td><best_data>31.90</best_data></td> 
-        <td><best_data>34.61</best_data></td> 
-        <td><best_data>38.30</best_data></td> 
-        <td><best_data>38.74</best_data></td>
+        <td><i>32.97</i></td> 
+        <td><i>37.95</i></td> 
+        <td><i>38.59</i></td> 
+        <td><i><b>31.90</b></i></td> 
+        <td><i><b>34.61</b></i></td> 
+        <td><i><b>38.30</b></i></td> 
+        <td><i><b>38.74</b></i></td>
     </tr>
     <tr>
         <td>0.920</td> 
-        <td><second_data>0.941</second_data></td> 
-        <td><second_data>0.962</second_data></td> 
-        <td><second_data>0.964</second_data></td> 
+        <td><i>0.941</i></td> 
+        <td><i>0.962</i></td> 
+        <td><i>0.964</i></td> 
         <td>0.920</td> 
-        <td><second_data>0.941</second_data></td> 
-        <td><second_data>0.962</second_data></td> 
-        <td><second_data>0.964</second_data></td> 
-        <td><best_data>0.936</best_data></td> 
-        <td><best_data>0.953</best_data></td> 
-        <td><best_data>0.966</best_data></td> 
-        <td><best_data>0.967</best_data></td>
+        <td><i>0.941</i></td> 
+        <td><i>0.962</i></td> 
+        <td><i>0.964</i></td> 
+        <td><i><b>0.936</b></i></td> 
+        <td><i><b>0.953</b></i></td> 
+        <td><i><b>0.966</b></i></td> 
+        <td><i><b>0.967</b></i></td>
     </tr>
     <tr>
-        <td><second_data>0.070</second_data></td> 
-        <td><second_data>0.049</second_data></td> 
+        <td><i>0.070</i></td> 
+        <td><i>0.049</i></td> 
         <td>0.037</td> 
-        <td><second_data>0.035</second_data></td> 
-        <td><second_data>0.070</second_data></td> 
-        <td><second_data>0.049</second_data></td> 
-        <td><second_data>0.036</second_data></td> 
+        <td><i>0.035</i></td> 
+        <td><i>0.070</i></td> 
+        <td><i>0.049</i></td> 
+        <td><i>0.036</i></td> 
         <td>0.036</td> 
-        <td><best_data>0.050</best_data></td> 
-        <td><best_data>0.036</best_data></td> 
-        <td><best_data>0.030</best_data></td> 
-        <td><best_data>0.031</best_data></td>
+        <td><i><b>0.050</b></i></td> 
+        <td><i><b>0.036</b></i></td> 
+        <td><i><b>0.030</b></i></td> 
+        <td><i><b>0.031</b></i></td>
     </tr>
     <tr>
         <td rowspan="3"><div align="left">Avg.</div></td>    
@@ -336,53 +307,51 @@ Replica_r2
         <td>34.16</td> 
         <td>37.49</td> 
         <td>37.84</td> 
-        <td><second_data>30.63</second_data></td> 
-        <td><second_data>34.22</second_data></td> 
-        <td><second_data>37.71</second_data></td> 
-        <td><second_data>38.18</second_data></td> 
-        <td><best_data>31.83</best_data></td> 
-        <td><best_data>35.13</best_data></td> 
-        <td><best_data>38.18</best_data></td> 
-        <td><best_data>38.20</best_data></td>
+        <td><i>30.63</i></td> 
+        <td><i>34.22</i></td> 
+        <td><i>37.71</i></td> 
+        <td><i>38.18</i></td> 
+        <td><i><b>31.83</b></i></td> 
+        <td><i><b>35.13</b></i></td> 
+        <td><i><b>38.18</b></i></td> 
+        <td><i><b>38.20</b></i></td>
     </tr>
     <tr>
-        <td><second_data>0.929</second_data></td> 
+        <td><i>0.929</i></td> 
         <td>0.949</td> 
-        <td><second_data>0.964</second_data></td> 
-        <td><second_data>0.964</second_data></td> 
-        <td><second_data>0.929</second_data></td> 
-        <td><second_data>0.950</second_data></td> 
-        <td><second_data>0.964</second_data></td> 
-        <td><second_data>0.964</second_data></td> 
-        <td><best_data>0.939</best_data></td> 
-        <td><best_data>0.957</best_data></td> 
-        <td><best_data>0.967</best_data></td> 
-        <td><best_data>0.970</best_data></td>
+        <td><i>0.964</i></td> 
+        <td><i>0.964</i></td> 
+        <td><i>0.929</i></td> 
+        <td><i>0.950</i></td> 
+        <td><i>0.964</i></td> 
+        <td><i>0.964</i></td> 
+        <td><i><b>0.939</b></i></td> 
+        <td><i><b>0.957</b></i></td> 
+        <td><i><b>0.967</b></i></td> 
+        <td><i><b>0.970</b></i></td>
     </tr>
     <tr>
-        <td><second_data>0.056</second_data></td> 
-        <td><second_data>0.039</second_data></td> 
-        <td><second_data>0.032</second_data></td> 
-        <td><second_data>0.032</second_data></td> 
-        <td><second_data>0.056</second_data></td> 
-        <td><second_data>0.039</second_data></td> 
-        <td><second_data>0.032</second_data></td> 
-        <td><second_data>0.032</second_data></td> 
-        <td><best_data>0.043</best_data></td> 
-        <td><best_data>0.030</best_data></td> 
-        <td><best_data>0.026</best_data></td> 
-        <td><best_data>0.026</best_data></td>
+        <td><i>0.056</i></td> 
+        <td><i>0.039</i></td> 
+        <td><i>0.032</i></td> 
+        <td><i>0.032</i></td> 
+        <td><i>0.056</i></td> 
+        <td><i>0.039</i></td> 
+        <td><i>0.032</i></td> 
+        <td><i>0.032</i></td> 
+        <td><i><b>0.043</b></i></td> 
+        <td><i><b>0.030</b></i></td> 
+        <td><i><b>0.026</b></i></td> 
+        <td><i><b>0.026</b></i></td>
     </tr>
 </table>
 
 <div>
-<i>
 Table I. Comparison of rendering on the Replica dataset. 
 ↓ indicates the lower the better, 
 ↑ indicates the higher the better.
-The best score is in <best_data>dark green</best_data>. 
-The second best score is in <second_data>light green</second_data>.
-</i>
+The best score is in <i><b>bold and italic</b></i>. 
+The second best score is in <i>italic</i>.
 </div>
 
 
@@ -408,7 +377,7 @@ The second best score is in <second_data>light green</second_data>.
         <td>0.025</td>
         <td>0.042</td>
         <td>0.017</td>
-        <td><best_data>0.019</best_data></td>
+        <td><i><b>0.019</b></i></td>
         <td>0.039</td>
         <td>0.032</td>
         <td>0.032</td>
@@ -419,41 +388,41 @@ The second best score is in <second_data>light green</second_data>.
         <td>0.081</td>
         <td>0.146</td>
         <td>0.050</td>
-        <td><best_data>0.055</best_data></td>
-        <td><best_data>0.201</best_data></td>
+        <td><i><b>0.055</b></i></td>
+        <td><i><b>0.201</b></i></td>
         <td>0.066</td>
         <td>0.112</td>
         <td>0.097</td>
     </tr>
     <tr>
 <td rowspan="2"><div align="center">mean (m)<br>std (m)</div></td>
-        <td><best_data>0.018</best_data></td>
-        <td><best_data>0.014</best_data></td>
-        <td><best_data>0.015</best_data></td>
-        <td><best_data>0.020</best_data></td>
+        <td><i><b>0.018</b></i></td>
+        <td><i><b>0.014</b></i></td>
+        <td><i><b>0.015</b></i></td>
+        <td><i><b>0.020</b></i></td>
         <td>0.029</td>
-        <td><best_data>0.013</best_data></td>
-        <td><best_data>0.018</best_data></td>
-        <td><best_data>0.014</best_data></td>
-        <td><best_data>0.018</best_data></td>
+        <td><i><b>0.013</b></i></td>
+        <td><i><b>0.018</b></i></td>
+        <td><i><b>0.014</b></i></td>
+        <td><i><b>0.018</b></i></td>
     </tr>
     <tr>
-        <td><best_data>0.032</best_data></td> 
-        <td><best_data>0.016</best_data></td> 
-        <td><best_data>0.028</best_data></td> 
-        <td><best_data>0.042</best_data></td> 
+        <td><i><b>0.032</b></i></td> 
+        <td><i><b>0.016</b></i></td> 
+        <td><i><b>0.028</b></i></td> 
+        <td><i><b>0.042</b></i></td> 
         <td>0.067</td> 
         <td>0.024</td> 
-        <td><best_data>0.020</best_data></td> 
-        <td><best_data>0.023</best_data></td> 
-        <td><best_data>0.031</best_data></td> 
+        <td><i><b>0.020</b></i></td> 
+        <td><i><b>0.023</b></i></td> 
+        <td><i><b>0.031</b></i></td> 
     </tr>
 </table>
 
-*Table II. Comparison of reconstruction performance on the Replica dataset.
+Table II. Comparison of reconstruction performance on the Replica dataset.
 Based on the ground truth mesh models provided by the
 Replica dataset, we align these mesh models with point clouds from Gaussian
-models, where we randomly sample three points in each Gaussian ellipsoid.*
+models, where we randomly sample three points in each Gaussian ellipsoid.
 
 ## ⭕️ Acknowledgment
 This project is based on [3DGS](https://github.com/graphdeco-inria/gaussian-splatting) 
