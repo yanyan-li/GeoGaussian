@@ -112,8 +112,6 @@ Replica_r2
 
 
 ## 🔧 Setup of GeoGaussian
-### The tutorial will be released soon 🔜 !
-
 ### 1. Clone the repo.
 ```
 # https
