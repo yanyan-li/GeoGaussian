@@ -10,3 +10,4 @@ submodules/diff-gaussian-rasterization/dist/
 submodules/simple-knn/build/
 submodules/simple-knn/simple_knn.egg-info/
 submodules/simple-knn/dist/
+test.py

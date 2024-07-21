@@ -114,6 +114,53 @@ Replica_r2
 ## 🔧 Setup of GeoGaussian
 ### The tutorial will be released soon 🔜 !
 
+### 1. Clone the repo.
+```
+# https
+git clone https://github.com/yanyan-li/GeoGaussian
+# or ssh
+git clone git@github.com:yanyan-li/GeoGaussian.git
+```
+
+### 2. Environment setup.
+If you have an environment used for 3dgs, use it. 
+If not, please refer to the environment configuration of [3DGS environment](https://github.com/graphdeco-inria/gaussian-splatting?tab=readme-ov-file#local-setup) 
+The ``environment.yml`` file for 3DGS has been provided in our repo.
+
+Additionally, you also need to install the 
+``open3d`` ``scipy`` ``matplotlib`` ``pillow``
+libraries.
+
+```
+# If you have already installed the 3dgs environment,
+# please activate the environment and execute the following command :
+conda activate gaussian_splatting
+pip install open3d scipy matplotlib pillow
+```
+
+### 3. Download the demo dataset
+- Create a new ``data`` folder
+- Download the file ([Replica OFF2](https://drive.google.com/file/d/1uqCpIL22YOZlMsxX-FQfPLVpFQ6emV2T/view?usp=drive_link)).
+- Unzip it to ``data`` folder.
+
+### 4. Run the codes 
+In order to run our code, 
+you should specify the path of the dataset 
+which should include the ``KeyFrameTrajectory.txt`` file or ``sparse`` folder 
+and specify the sparsity of the images that is the interval between the input images.
+```
+# python train.py -s [path_to_dataset] --sparse_num [N]( 1 ==> 100% images, 5 ==> 20% images)
+```
+Run demo:
+```
+python train.py -s data/Replica-OFF2 --sparse_num 1
+```
+Then you will find that the ``output`` folder has a specific ``xxxxxxxx-x`` directory, 
+as well as ``depth`` and ``rgb`` directories, 
+which respectively store the RGB and depth images 
+rendered during the training process.
+
+
 
 ## 📊 Results
 

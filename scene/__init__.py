@@ -43,7 +43,7 @@ class Scene:
         if os.path.exists(os.path.join(args.source_path, "sparse")):
             scene_info = sceneLoadTypeCallbacks["Colmap"](args.source_path, args.images, args.eval)
         elif os.path.exists(os.path.join(args.source_path, "KeyFrameTrajectory2.txt")):
-            print("Found traj.txt file, assuming Manhattan data set!")
+            print("Found KeyFrameTrajectory2.txt file, assuming Manhattan data set!")
             scene_info = sceneLoadTypeCallbacks["Manhattan"](args.source_path, args.white_background, args.eval, sparse_num)
         else:
             assert False, "Could not recognize scene type!"
