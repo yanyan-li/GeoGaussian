@@ -55,7 +55,7 @@ with training views, 3DGS and LightGS have issues with photorealistic rendering.
 - [x] *Dataset* - Upload [dataset](#-dataset) download link.
 - [x] *ReadMe* - Teaser( [I](img/gif/compressed-o2-out.gif) [II](img/gif/compressed-o2-out.gif) [III](img/gif/compressed-icl-r2-out.gif) ) images & [Abstract](#-abstract).
 - [x] *ReadMe* - Geometry-aware [Strategies](#-geometry-aware-strategies).
-- [ ] *ReadMe* - Repository [Setup](#-setup-of-geogaussian).
+- [x] *ReadMe* - Repository [Setup](#-setup-of-geogaussian).
 - [x] *ReadMe* - [Results](#-results) for Table I. & Table II.
 - [x] *ReadMe* - [License](#-license) & [Acknowledgment](#-acknowledgment) & [Citation](#-citation).
 - [x] *License* - Released under the [Gaussian-Splatting License](LICENSE.md).
