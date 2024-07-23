@@ -138,7 +138,7 @@ pip install open3d scipy matplotlib pillow
 
 ### 3. Download the demo dataset
 - Create a new ``data`` folder
-- Download the file ([Replica OFF2](https://drive.google.com/file/d/1uqCpIL22YOZlMsxX-FQfPLVpFQ6emV2T/view?usp=drive_link)).
+- Download the file ([Replica OFF2](https://drive.google.com/file/d/1F24k1tGOXqaEgzR3H4Wh3hcqcNzLph9Q/view?usp=drive_link)).
 - Unzip it to ``data`` folder.
 
 ### 4. Run the codes 
