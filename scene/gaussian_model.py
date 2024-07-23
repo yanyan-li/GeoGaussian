@@ -163,7 +163,7 @@ class GaussianModel:
         self._knn_index[k] = [self.knn_tree.search_knn_vector_3d(p, knn=k)[1] for p in pc.points]
 
         # 转换为torch张量
-        data = [torch.tensor(np.array(index)).unsqueeze(0) for index in self._knn_index[k]]
+        data = [torch.tensor(np.array(index, dtype=np.int32))).unsqueeze(0) for index in self._knn_index[k]]
         data = torch.concat(data, dim=0).cuda()
         # t2 = time.time()
         # print('\nknn time(s) : ', f'{t2 - t1:.3f}')
