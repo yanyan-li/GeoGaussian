@@ -148,7 +148,7 @@ class GaussianModel:
             self.active_sh_degree += 1
 
     def createKDTree(self, pc):
-        # 创建KDTree
+        # build KDTree
         self.knn_tree = o3d.geometry.KDTreeFlann(pc)
 
     def findKNN(self, k=4):
@@ -159,11 +159,11 @@ class GaussianModel:
 
         self.createKDTree(pc)
 
-        # 寻找最近邻点
+        # nn
         self._knn_index[k] = [self.knn_tree.search_knn_vector_3d(p, knn=k)[1] for p in pc.points]
 
-        # 转换为torch张量
-        data = [torch.tensor(np.array(index, dtype=np.int32))).unsqueeze(0) for index in self._knn_index[k]]
+        # to torch tensor
+        data = [torch.tensor(np.array(index, dtype=np.int32)).unsqueeze(0) for index in self._knn_index[k]]
         data = torch.concat(data, dim=0).cuda()
         # t2 = time.time()
         # print('\nknn time(s) : ', f'{t2 - t1:.3f}')
@@ -172,7 +172,7 @@ class GaussianModel:
     def computeNormal(self, k=30):
 
         return None
-        # 创建点云
+        # build point
         t_1 = time.time()
         points_np = self.get_xyz.detach().cpu().numpy()
         pc = o3d.geometry.PointCloud()
@@ -204,7 +204,7 @@ class GaussianModel:
     def reset_xyz_id(self):
         number_point = self._xyz.shape[0]
         index_id = np.arange(number_point)
-        self._xyz_id = torch.tensor(index_id).cuda()
+        self._xyz_id = torch.tensor(index_id).int().cuda()
 
     def create_from_pcd(self, pcd : BasicPointCloud, spatial_lr_scale : float):
         self.spatial_lr_scale = spatial_lr_scale

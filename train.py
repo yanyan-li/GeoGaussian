@@ -105,6 +105,10 @@ def training(dataset, opt, pipe, testing_iterations, saving_iterations, checkpoi
             # CUDA Implementation
             if visibility_filter.sum() > 0:
                 mask = torch.logical_and(visibility_filter, gaussians.get_type.squeeze() == 1)
+                # print("gaussians.get_xyz", gaussians.get_xyz.dtype)
+                # print("gaussians.get_rotation", gaussians.get_rotation.dtype)
+                # print("gaussians.get_xyz_id.contiguous", gaussians.get_xyz_id.contiguous().dtype)
+                # print("KNN_index[mask]", KNN_index[mask].dtype)
                 pair_d_loss, pair_normal_loss = SurfaceAlign()(gaussians.get_xyz,
                                                                gaussians.get_xyz_id.contiguous(),
                                                                gaussians.get_rotation,
