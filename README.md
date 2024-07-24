@@ -59,6 +59,8 @@ with training views, 3DGS and LightGS have issues with photorealistic rendering.
 - [x] *ReadMe* - [Results](#-results) for Table I. & Table II.
 - [x] *ReadMe* - [License](#-license) & [Acknowledgment](#-acknowledgment) & [Citation](#-citation).
 - [x] *License* - Released under the [Gaussian-Splatting License](LICENSE.md).
+- [x] *Test* - Tested on Windows Workstation
+- [x] *Test* - Tested on Ubuntu Server
 
 ## 🚀 Geometry-aware Strategies
 <div align="center">
